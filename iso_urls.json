@@ -1,10 +1,10 @@
 {
   "x86_64": {
-    "iso_url": "https://releases.nixos.org/nixos/21.05/nixos-21.05.3443.ee90403e147/nixos-minimal-21.05.3443.ee90403e147-x86_64-linux.iso",
-    "iso_sha256": "7fec8949043bca97c6930177af868532219aa4037017f2f6122094035eeafb1c"
+    "iso_url": "https://channels.nixos.org/nixos-21.11/latest-nixos-minimal-x86_64-linux.iso",
+    "iso_sha256": "7cb910f01993cdbbaae87ab54e5317be28a268c0ef71f6c919ab759f2a9f00e2"
   },
   "i686": {
-    "iso_url": "https://releases.nixos.org/nixos/21.05/nixos-21.05.3443.ee90403e147/nixos-minimal-21.05.3443.ee90403e147-i686-linux.iso",
-    "iso_sha256": "3ef4743ded79c72d91a6f71d06f9868c62c769a99ca79e398869a7f02b8bcb14"
+    "iso_url": "https://channels.nixos.org/nixos-21.11/latest-nixos-minimal-i686-linux.iso",
+    "iso_sha256": "9bb6469fa944045d20d82e66f74dee037cb868a4b9a4f0e6f76df1e304a23579"
   }
 }

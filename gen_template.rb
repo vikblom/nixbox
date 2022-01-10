@@ -20,12 +20,12 @@ def builder(**opts)
     boot_command: [
       'echo http://{{ .HTTPIP }}:{{ .HTTPPort}} > .packer_http<enter>',
       'mkdir -m 0700 .ssh<enter>',
-      'curl $(cat .packer_http)/install_rsa.pub > .ssh/authorized_keys<enter>',
+      'curl $(cat .packer_http)/install_key.pub > .ssh/authorized_keys<enter>',
       'sudo systemctl start sshd<enter>',
     ],
     http_directory: 'scripts',
     shutdown_command: 'sudo shutdown -h now',
-    ssh_private_key_file: './scripts/install_rsa',
+    ssh_private_key_file: './scripts/install_key',
     ssh_port: 22,
     ssh_username: 'nixos',
     headless: true
@@ -91,7 +91,7 @@ def gen_template(
         boot_command: [
           "echo http://{{ .HTTPIP }}:{{ .HTTPPort}} > .packer_http<enter>",
           "mkdir -m 0700 .ssh<enter>",
-          "curl $(cat .packer_http)/install_rsa.pub > .ssh/authorized_keys<enter>",
+          "curl $(cat .packer_http)/install_key.pub > .ssh/authorized_keys<enter>",
           # remaining commands run as root
           "sudo su --<enter>",
           "nix-env -iA nixos.linuxPackages.hyperv-daemons<enter><wait10>",
